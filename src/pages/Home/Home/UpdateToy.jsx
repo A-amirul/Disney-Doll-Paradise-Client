@@ -25,7 +25,7 @@ const UpdateToy = () => {
 	useTitle('Update Toy');
 
 	return (
-		<div className="md:px-96 px-4 mx-auto bg-base-200 md:py-36">
+		<div className="max-w-7xl mx-auto bg-base-200 md:py-36">
 			<form onSubmit={handleSubmit(handleUpdate)}>
 				<div className="grid grid-cols-1 gap-4">
 

@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import useTitle from "../../../useTitle";
 import banner from "/banner.gif"
-import { Tab, Tabs} from 'react-tabs';
+import { Tab, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { useEffect, useState } from "react";
 import CategoryCard from "./CategoryCard";
@@ -30,31 +30,31 @@ const Home = () => {
 	}, []);
 
 	return (
-		<div className=" bg-base-200">
+		<div className=" bg-base-200 max-w-7xl mx-auto">
 			{/* banner */}
 			<div className="bg-cover  bg-no-repeat md:py-72 py-6 bg-[#2D4764]" style={{
 				backgroundImage: `url(${banner})`
 			}}>
-				<div>
-					<h1 className="md:text-5xl text-md text-white font-medium mb-4 capitalize md:px-64 px-4">Super <span className="text-amber-500">Collection</span> For <br /> Disney <span className="text-amber-500">Dolls </span>Paradise</h1>
-					<p className="md:px-64 md:w-1/2 text-sm md:text-lg px-4 text-base-100">Explore the Magical World of Disney Dolls Paradise! <br /> Join us on this enchanting journey as we celebrate the beloved characters that have touched our hearts.</p>
+				<div className="md:px-4">
+					<h1 className="md:text-5xl text-md text-white font-medium mb-4 capitalize px-4">Super <span className="text-amber-500">Collection</span> For <br /> Disney <span className="text-amber-500">Dolls </span>Paradise</h1>
+					<p className=" text-sm md:text-lg px-4 text-base-100">Explore the Magical World of Disney Dolls Paradise! <br /> Join us on this enchanting journey as we celebrate the beloved characters that have touched our hearts.</p>
 					<div className="md:mt-12 mt-4">
-						<Link to="/" className="bg-primary border border-primary text-white md:mx-64 md:px-8 px-4 md:py-3 py-2 mx-4 md:font-medium rounded-md hover:bg-transparent hover:text-primary transition ">Shop Now</Link>
+						<Link to="/" className="bg-primary border border-primary text-white px-4 md:py-3 py-2 mx-4 md:font-medium rounded-md hover:bg-transparent hover:text-primary transition ">Shop Now</Link>
 					</div>
 				</div>
 			</div>
 
-			
+
 
 			{/* Category Tab */}
-			<div className="md:px-64 py-8">
+			<div className="md:px-4 py-8">
 				<h1 className="text-4xl font-medium py-4 text-center">Shop by Category</h1>
 
 				<Tabs className="text-center font-bold text-xl py-3" >
-					<Tab  className={`tab ${selectedValue === 'all' ? 'active' : ''}`} onClick={() => handleTabChange('all')}>
+					<Tab className={`tab ${selectedValue === 'all' ? 'active' : ''}`} onClick={() => handleTabChange('all')}>
 						All
 					</Tab>
-					<Tab  className={`tab ${selectedValue === 'princess' ? 'active' : ''}`} onClick={() => handleTabChange('princess')}>
+					<Tab className={`tab ${selectedValue === 'princess' ? 'active' : ''}`} onClick={() => handleTabChange('princess')}>
 						Disney Princess
 					</Tab>
 					<Tab className={`tab ${selectedValue === 'frozen' ? 'active' : ''}`} onClick={() => handleTabChange('frozen')}>
@@ -78,7 +78,7 @@ const Home = () => {
 			</div>
 
 			{/* Gallery Section */}
-			<div className="md:px-64 px-4 pb-8">
+			<div className="md:px-4 px-4 pb-8">
 				<h1 className="text-center text-4xl font-semibold py-8  md:mt-8 text-black" >Dolls Gallery</h1>
 				<div className="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos-anchor-placement="top-center" data-aos="fade-up" data-aos-duration="1000" >
 					<img src="https://i.ibb.co/2tF5JD9/img4.jpg" alt="" />
@@ -89,21 +89,21 @@ const Home = () => {
 					<img src="https://i.ibb.co/NF7jq9C/img3.jpg" alt="" />
 					<img src="https://i.ibb.co/TTVkkD0/img3.webp" alt="" />
 					<img src="https://i.ibb.co/hf0Jr3H/img2.webp" alt="" />
-					
+
 				</div>
 
 			</div>
 
 			{/* Best Doll Finder */}
 
-			<div className="md:px-72 py-8">
+			<div className="md:px-4 py-8 ">
 				<div className="card lg:card-side" data-aos-anchor-placement="top-center" data-aos="fade-up" data-aos-duration="1000">
-					<div className="card-body">
-						<h2 className="card-title text-sky-800 text-2xl md:text-6xl">Best dolls finder  Website <br /> Disney Dolls Paradise </h2>
+					<div className="card-body h-50">
+						<h2 className="card-title text-sky-800 text-2xl md:text-4xl font-bold">Best dolls finder  Website <br /> Disney Dolls Paradise </h2>
 						<p className="md:w-3/4 py-3 md:text-xl">Do you want a reborn or a Disney doll? Which size? Any special hair color? Here is available Disney Princess, Frozen Dolls and animation character dolls. Find the doll you are looking for with the exclusive Dolls And Dolls Advanced Search Engine.</p>
-							<button className="btn btn-outline w-1/2 md:w-1/4">Shop Now</button>
+						<button className="btn btn-outline w-1/2 md:w-1/4">Shop Now</button>
 					</div>
-					<figure className="md:w-1/2" ><img src={img} /></figure>
+					<img className="" src={img} />
 				</div>
 			</div>
 
@@ -114,7 +114,7 @@ const Home = () => {
 						<h2 className="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
 							Contact Us
 						</h2>
-						<p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+						<p className="mt-4 max-w-7xl mx-auto text-xl text-gray-500 lg:mx-auto">
 							We would love to hear from you. Send us a message and we will get back to you as soon as possible.
 						</p>
 					</div>

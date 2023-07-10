@@ -58,7 +58,7 @@ const MyToy = () => {
 		<div>
 
 
-			<div className="md:px-64 px-4 py-8 md:py-16 bg-base-200">
+			<div className="max-w-7xl mx-auto px-4 py-8 md:py-20  bg-base-200">
 
 
 				<h2 className="text-center font-medium md:text-4xl text-xl">My Toys: {myToys?.length}</h2>
